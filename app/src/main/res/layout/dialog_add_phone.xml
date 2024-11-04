@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Campo de entrada para el número de teléfono -->
+    <EditText
+        android:id="@+id/phoneNumberField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Número de Teléfono"
+        android:inputType="phone" />
+
+    <!-- Spinner para seleccionar la etiqueta del teléfono (e.g., Casa, Trabajo) -->
+    <Spinner
+        android:id="@+id/phoneLabelSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

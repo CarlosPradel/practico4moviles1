@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Contenedor principal en un diseño de ScrollView para permitir desplazamiento si el contenido es extenso -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Imagen de perfil del contacto -->
+        <ImageView
+            android:id="@+id/profileImageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/agregar"
+            android:contentDescription="Imagen de perfil" />
+
+        <!-- Campos de entrada para la información básica del contacto -->
+        <EditText
+            android:id="@+id/nameField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre" />
+
+        <EditText
+            android:id="@+id/lastNameField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Apellido" />
+
+        <EditText
+            android:id="@+id/companyField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Empresa" />
+
+        <EditText
+            android:id="@+id/addressField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Dirección" />
+
+        <EditText
+            android:id="@+id/cityField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ciudad" />
+
+        <EditText
+            android:id="@+id/stateField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Estado" />
+
+        <!-- Sección para mostrar y gestionar teléfonos -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Teléfonos"
+            android:layout_marginTop="16dp"
+            android:textStyle="bold" />
+
+        <!-- RecyclerView para la lista de teléfonos asociados al contacto -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/phoneRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Sección para mostrar y gestionar correos electrónicos -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Correos"
+            android:layout_marginTop="16dp"
+            android:textStyle="bold" />
+
+        <!-- RecyclerView para la lista de correos electrónicos asociados al contacto -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/emailRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Botón para guardar cambios realizados en el contacto -->
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Guardar cambios"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="?attr/colorPrimary" />
+
+        <!-- Botón para eliminar el contacto -->
+        <Button
+            android:id="@+id/deleteButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Eliminar contacto"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="?attr/colorError" />
+    </LinearLayout>
+</ScrollView>

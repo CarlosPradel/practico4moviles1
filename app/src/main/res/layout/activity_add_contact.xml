@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Contenedor principal en un diseño de ScrollView para permitir desplazamiento si el contenido es extenso -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Campo para el nombre del contacto -->
+        <EditText
+            android:id="@+id/nameField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre" />
+
+        <!-- Campo para el apellido del contacto -->
+        <EditText
+            android:id="@+id/lastNameField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Apellido" />
+
+        <!-- Campo para la empresa asociada al contacto -->
+        <EditText
+            android:id="@+id/companyField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Empresa" />
+
+        <!-- Campo para la dirección del contacto -->
+        <EditText
+            android:id="@+id/addressField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Dirección" />
+
+        <!-- Campo para la ciudad del contacto -->
+        <EditText
+            android:id="@+id/cityField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ciudad" />
+
+        <!-- Campo para el estado o provincia del contacto -->
+        <EditText
+            android:id="@+id/stateField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Estado" />
+
+        <!-- Campo para ingresar el número de teléfono del contacto -->
+        <EditText
+            android:id="@+id/phoneNumberField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Número de Teléfono" />
+
+        <!-- Botón para agregar un número de teléfono a la lista -->
+        <Button
+            android:id="@+id/addPhoneButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Agregar Teléfono"
+            android:layout_marginTop="8dp" />
+
+        <!-- RecyclerView para mostrar la lista de teléfonos agregados -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/phoneRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" />
+
+        <!-- Botón para agregar un correo electrónico a la lista -->
+        <Button
+            android:id="@+id/addEmailButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Agregar Correo"
+            android:layout_marginTop="8dp" />
+
+        <!-- RecyclerView para mostrar la lista de correos electrónicos agregados -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/emailRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" />
+
+        <!-- Imagen de perfil del contacto (inicialmente muestra una imagen de marcador de posición) -->
+        <ImageView
+            android:id="@+id/profileImageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/agregar"
+            android:contentDescription="@string/profile_image" />
+
+        <!-- Botón para seleccionar una imagen de perfil para el contacto -->
+        <Button
+            android:id="@+id/selectImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seleccionar Imagen"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp" />
+
+        <!-- Botón para guardar el contacto al final del formulario -->
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Guardar"
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+</ScrollView>
